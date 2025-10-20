@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Objects in Javascript</title>
+    </head>
+    <body>
+        <h1>Objects</h1>
+        <script>
+
+    //Object,nested objects,functions in an object
+            const product1 = {
+                'name' : 'Bag',
+                'price' : 200,
+                'delivery-time': '1 day',
+                rating :{
+                    'star': 4,
+                    'reviews': 100
+                },
+                fun :function description1(){
+                    console.log('This is a new bag functions');
+                }
+                
+            }
+            console.log(product1)
+            console.log(product1.name)
+            console.log(product1.price)
+            console.log(product1.rating.star,product1.rating.reviews)
+            console.log(product1['delivery-time'])
+            product1.fun()
+
+            //JSON Object
+            console.log(JSON.stringify(product1));
+            const product2 = JSON.stringify(product1);
+            console.log(JSON.parse(product2));
+
+            //Local Storage
+            localStorage.setItem("message","Hello World");
+            console.log(localStorage.getItem("message"));
+            
+            
+    </script>
+    </body>
+</html>
